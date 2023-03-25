@@ -1,0 +1,7 @@
+.product-page-container {
+    width: 80vw;
+    max-width: 870px;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-column-gap: 20px;
+}

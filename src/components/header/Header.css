@@ -1,0 +1,43 @@
+header {
+    width: auto;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav h2 {
+    margin-right: 20px;
+}
+
+nav span {
+    cursor: pointer;
+}
+
+.cart-btn, .user-btn {
+    cursor: pointer;
+}
+
+
+.cart-btn {
+    width: 28px;
+    height: 28px;
+}
+
+.user-btn {
+    width: 52px;
+}
+
+.flex_center_align {
+    display: flex !important;
+    align-items: center;
+}
+
+.flex_gap_10 {
+    gap: 10px;
+}
