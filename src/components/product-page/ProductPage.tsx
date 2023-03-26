@@ -9,7 +9,7 @@ export const ProductPage: React.FC<{product: Product}> = ({product}) => {
 
     const getProductPrice = (): string => {
         if (product.discountPercent) {
-            return `$${Math.floor(product.price * product.discountPercent / 100)}.00`
+            return `$${Math.floor(product.price * (1 - product.discountPercent / 100))}.00`
         }
         return `$${Math.floor(product.price)}.00`;
     }
@@ -25,6 +25,8 @@ export const ProductPage: React.FC<{product: Product}> = ({product}) => {
     const decrementCount = (): void => {
         setCount(count - 1);
     }
+
+    if (!product) return <h1>Loading...</h1>
 
     return(
         <div className="product-page-container">

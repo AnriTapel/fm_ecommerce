@@ -23,6 +23,52 @@
                 "price": 250,
                 "brand": "Sneaker company",
                 "discountPercent": 50
+            }, 
+            {
+                "id": 124,
+                "name": "New collection sneakes",
+                "description": "Enim ut elit mollit ex exercitation id velit adipisicing. Do reprehenderit enim id deserunt incididunt veniam eu elit cillum culpa esse. Elit ea reprehenderit aliqua quis dolor reprehenderit. Culpa nulla cupidatat sunt in. Culpa deserunt ea irure tempor aliquip proident anim culpa mollit.",
+                "images": [
+                    {
+                        "main": "/images/image-product-1.jpg",
+                        "thumb": "/images/image-product-1-thumbnail.jpg"
+                    },{
+                        "main": "/images/image-product-2.jpg",
+                        "thumb": "/images/image-product-2-thumbnail.jpg"
+                    },{
+                        "main": "/images/image-product-3.jpg",
+                        "thumb": "/images/image-product-3-thumbnail.jpg"
+                    },{
+                        "main": "/images/image-product-4.jpg",
+                        "thumb": "/images/image-product-4-thumbnail.jpg"
+                    }
+                ],
+                "price": 300,
+                "brand": "Athletico Derbent",
+                "discountPercent": null
+            }, 
+            {
+                "id": 125,
+                "name": "Phui Che Za Bashmaki",
+                "description": "Lorem elit nisi consequat labore do incididunt commodo cupidatat. Consequat cillum veniam et do tempor eiusmod enim pariatur ipsum nisi. Eu sit eu ex quis ex ex reprehenderit culpa.",
+                "images": [
+                    {
+                        "main": "/images/image-product-1.jpg",
+                        "thumb": "/images/image-product-1-thumbnail.jpg"
+                    },{
+                        "main": "/images/image-product-2.jpg",
+                        "thumb": "/images/image-product-2-thumbnail.jpg"
+                    },{
+                        "main": "/images/image-product-3.jpg",
+                        "thumb": "/images/image-product-3-thumbnail.jpg"
+                    },{
+                        "main": "/images/image-product-4.jpg",
+                        "thumb": "/images/image-product-4-thumbnail.jpg"
+                    }
+                ],
+                "price": 340,
+                "brand": "Anzoro Rossi",
+                "discountPercent": 20
             }
         ]
     }
