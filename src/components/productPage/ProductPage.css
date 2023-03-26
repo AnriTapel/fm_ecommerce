@@ -15,7 +15,7 @@
 }
 
 .product-brand {
-    color: #b05708;
+    color: hsl(26, 100%, 55%);
     font-size: 16px;
 }
 
@@ -34,4 +34,51 @@
 .product-price {
     font-weight: bold;
     font-size: 22px;
+}
+
+.controls-block,
+.controls-block .quantity-control-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controls-block {
+    width: 80%;
+    margin-top: 20px 0;
+}
+
+.controls-block .quantity-control-block {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e9e9ed;
+}
+
+.controls-block .quantity-control-block button {
+    background-color: transparent;
+    border: none;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.controls-block .quantity-control-block span {
+    margin: 0 10px;
+    font-size: 18px;
+    width: 25px;
+    text-align: center;
+}
+
+.add-to-cart-btn {
+    width: 160px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(26, 100%, 55%);
+    cursor: pointer;
 }
