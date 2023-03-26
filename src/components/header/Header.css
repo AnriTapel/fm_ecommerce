@@ -32,12 +32,3 @@ nav span {
 .user-btn {
     width: 52px;
 }
-
-.flex_center_align {
-    display: flex !important;
-    align-items: center;
-}
-
-.flex_gap_10 {
-    gap: 10px;
-}

@@ -1,7 +1,37 @@
 .product-page-container {
     width: 80vw;
+    margin: 40px auto 0;
     max-width: 870px;
     display: grid;
-    grid-template-columns: 350px 1fr;
-    grid-column-gap: 20px;
+    grid-template-columns: 450px 1fr;
+    grid-column-gap: 15px;
+    margin-bottom: 20px;
+}
+
+.product-info-block {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.product-brand {
+    color: #b05708;
+    font-size: 16px;
+}
+
+.product-name {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 40px;
+    margin: 15px 0;
+}
+
+.product-description {
+    color: #7e7e87;
+    width: 80%;
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 22px;
 }
