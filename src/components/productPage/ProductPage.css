@@ -81,4 +81,15 @@
     border: none;
     background-color: hsl(26, 100%, 55%);
     cursor: pointer;
+    transition: all 0.5s ease;
 }
+
+.add-to-cart-btn:hover {
+    background-color: hsl(26, 90%, 48%);
+}
+
+.add-to-cart-btn:active,
+.controls-block .quantity-control-block button:active {
+    transform: scale(1.1);
+}
+
