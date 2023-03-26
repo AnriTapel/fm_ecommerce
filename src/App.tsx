@@ -1,7 +1,6 @@
-import './App.css';
 import { Header } from './components/header/Header';
 import { ProductPage } from './components/productPage/ProductPage';
-import Product from './models/Product';
+import {Product} from './models/Product';
 
 const product: Product = {
   "id": 123,
