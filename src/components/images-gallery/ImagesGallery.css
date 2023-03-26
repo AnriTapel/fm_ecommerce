@@ -5,11 +5,13 @@
 
 .current-image-block {
     margin-bottom: 20px;
+    position: relative;
 }
 
-.current-image-block img {
-    max-height: 380px;
+.current-image-block .product-main-image {
+    width: 100%;
     border-radius: 10px;
+    transition: all .5 ease;
 }
 
 .gallery-block img {
@@ -17,10 +19,14 @@
     width: 78px;
     height: 78px;
     cursor: pointer;
-    transition: transform .5s ease;
+    transition: all .5s ease;
     overflow: hidden;
 }
 
 .gallery-block img:hover {
     transform: scale(1.15);
+}
+
+.active-image {
+    opacity: .5;
 }
