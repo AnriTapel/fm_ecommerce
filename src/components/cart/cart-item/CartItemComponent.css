@@ -1,0 +1,45 @@
+.cart-item-container {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.text-block, .price-block, .price-and-delete-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-block {
+    flex-shrink: 1;
+}
+
+.text-block .item-name {
+    font-weight: bold;
+}
+
+.price-and-delete-block {
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.delete-item {
+    width: 18px;
+    height: 18px;
+    align-self: end;
+}
+
+.delete-item img {
+    height: 100%;
+    transition: all .5s ease;
+}
+
+.delete-item img:hover {
+    transform: scale(1.15);
+}
+
+.text-block .item-brand, .price-block .item-quantity {
+    color: rgb(68, 68, 68);
+    opacity: .6;
+}

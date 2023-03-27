@@ -22,7 +22,7 @@ export const ImagesGallery: React.FC<{images: ProductImage[]}> = ({images}) => {
             <div className="current-image-block">
                 <img alt="Product image" className="product-main-image" ref={currentImageRef}/>
             </div>
-            <div className="gallery-block flex_center_align flex_gap_10">
+            <div className="gallery-block flex_center_align flex_gap_20">
                 {
                     images && images.map((it, index) => {
                         return (

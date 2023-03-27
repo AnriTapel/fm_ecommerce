@@ -2,20 +2,25 @@ import './ProductPage.css';
 import {Product} from "../../models/Product";
 import { ImagesGallery } from "../images-gallery/ImagesGallery";
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../store/cart/cart.slice';
+import { convertPriceToString, getProductResultPrice } from '../../services/UtilsService';
 
 export const ProductPage: React.FC<{product: Product}> = ({product}) => {
     
-    const [count, setCount] = useState<number>(0);
+    const [count, setCount] = useState<number>(1);
+    const dispatch = useDispatch();
 
     const getProductPrice = (): string => {
-        if (product.discountPercent) {
-            return `$${Math.floor(product.price * (1 - product.discountPercent / 100))}.00`
-        }
-        return `$${Math.floor(product.price)}.00`;
+        return convertPriceToString(getProductResultPrice(product));
     }
     
     const addProductToCart = (): void => {
-        
+        if (count < 1) {
+            return;
+        }
+        dispatch(addItem({productId: product.id, quantity: count}));
+        setCount(1);
     }
 
     const incrementCount = (): void => {

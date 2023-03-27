@@ -1,5 +1,6 @@
 import './Header.css';
 import { useState } from 'react';
+import { Cart } from '../cart/cart/Cart';
 
 export function Header() {
 
@@ -18,8 +19,16 @@ export function Header() {
                 <span>Women</span>
                 <span>Contacts</span>
             </nav>
-            <div className="flex_center_align flex_gap_10">
-                <img alt="Cart" className="cart-btn" src='/images/icon-cart.svg' onClick={toggleCartVisibility}/>
+            <div className="flex_center_align flex_gap_20">
+                <div className="cart-control-block">
+                    <img alt="Cart" className="cart-btn" src='/images/icon-cart.svg' onClick={toggleCartVisibility}/>
+                    {
+                        visible && 
+                        <div className="cart-wrapper">
+                            <Cart/>
+                        </div> 
+                    }
+                </div>
                 <img alt="User" className="user-btn" src="/images/image-avatar.png"/>
             </div>
         </header>
