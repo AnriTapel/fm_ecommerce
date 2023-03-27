@@ -1,36 +1,33 @@
+import React from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Header } from './components/header/Header';
-import { ProductPage } from './components/productPage/ProductPage';
-import {Product} from './models/Product';
-
-const product: Product = {
-  "id": 123,
-  "name": "Fall limited edition sneakes",
-  "description": "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sale, the'll withstand everything the weather can offer.",
-  "images": [
-      {
-          "main": "/images/image-product-1.jpg",
-          "thumb": "/images/image-product-1-thumbnail.jpg"
-      },{
-          "main": "/images/image-product-2.jpg",
-          "thumb": "/images/image-product-2-thumbnail.jpg"
-      },{
-          "main": "/images/image-product-3.jpg",
-          "thumb": "/images/image-product-3-thumbnail.jpg"
-      },{
-          "main": "/images/image-product-4.jpg",
-          "thumb": "/images/image-product-4-thumbnail.jpg"
-      }
-  ],
-  "price": 250,
-  "brand": "Sneaker company",
-  "discountPercent": 50
-}
+import { ProductPage } from './components/product-page/ProductPage';
+import { AppState } from './models/AppState';
+import { Product } from './models/Product';
+import { fetchAllProsucts } from './services/ProductsService';
+import { setProducts } from './store/products/products.slice';
 
 function App() {
+  const {products} = useSelector((state: AppState) => state.productsState);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    fetchAllProsucts()
+      .then((res: Product[]) => dispatch(setProducts(res)))
+      .catch(() => dispatch(setProducts([])))
+  }, []);
+  
   return (
     <>
       <Header/>
-      <ProductPage product={product}/>
+      {
+        products && products.map((it: Product) => (
+          <React.Fragment key={it.id}>
+            <ProductPage product={it} key={it.id}/><br/>
+          </React.Fragment>
+        ))
+      }
     </>
     
   );
