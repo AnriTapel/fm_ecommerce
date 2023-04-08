@@ -1,5 +1,5 @@
 import { CartItem } from "./CartItem";
-import { Product } from "./Product";
+import { IProduct } from "./Product";
 
 export interface AppState {
     cartState: CartState;
@@ -7,7 +7,7 @@ export interface AppState {
 }
 
 export interface ProductsState {
-    products: Product[]
+    products: IProduct[]
 }
 
 export interface CartState {

@@ -1,0 +1,6 @@
+.product-cards-container {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
