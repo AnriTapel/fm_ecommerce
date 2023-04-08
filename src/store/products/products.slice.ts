@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ProductsState } from "../../models/AppState";
-import { Product } from "../../models/Product";
+import { IProduct } from "../../models/Product";
 
 export const productsSlice = createSlice({
     name: 'products',
@@ -8,10 +8,10 @@ export const productsSlice = createSlice({
         products: []
     },
     reducers: {
-        setProducts: (state: ProductsState, action: PayloadAction<Product[]>) => {
+        setProducts: (state: ProductsState, action: PayloadAction<IProduct[]>) => {
             state.products = action.payload;
         },
-        addProduct: (state: ProductsState, action: PayloadAction<Product>) => {
+        addProduct: (state: ProductsState, action: PayloadAction<IProduct>) => {
             state.products.push(action.payload);
         },
         removeProduct: (state: ProductsState, actoion: PayloadAction<number>) => {

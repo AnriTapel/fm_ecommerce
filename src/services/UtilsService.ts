@@ -1,6 +1,6 @@
-import { Product } from "../models/Product";
+import { IProduct } from "../models/Product";
 
-export const getProductResultPrice = (product: Product | undefined): number => {
+export const getProductResultPrice = (product: IProduct | undefined): number => {
     if (!product) {
         return 0;
     }

@@ -1,8 +1,8 @@
+import { IProductImage } from '../../models/Product';
 import './ImagesGallery.css';
-import { ProductImage } from "../../models/Product"
 import { useEffect, useRef, useState } from 'react';
 
-export const ImagesGallery: React.FC<{images: ProductImage[]}> = ({images}) => {
+export const ImagesGallery: React.FC<{images: IProductImage[]}> = ({images}) => {
     const [currentIndex, setCurrentIndex] = useState<number>(0);
     const currentImageRef = useRef<HTMLImageElement>(null);
 

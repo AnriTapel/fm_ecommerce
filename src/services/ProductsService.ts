@@ -1,8 +1,8 @@
 import { Config } from "../models/Config";
-import { Product } from "../models/Product";
+import { IProduct } from "../models/Product";
 
-export function fetchAllProsucts(): Promise<Product[]> {
-    return new Promise<Product[]>(async (res, rej) => {
+export function fetchAllProsucts(): Promise<IProduct[]> {
+    return new Promise<IProduct[]>(async (res, rej) => {
         try {
             let response: Response = await fetch('/data/exampleData.json');
             let json: Config = await response.json();

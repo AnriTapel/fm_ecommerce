@@ -1,15 +1,27 @@
 import './ProductPage.css';
-import {Product} from "../../models/Product";
-import { ImagesGallery } from "../images-gallery/ImagesGallery";
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { addItem } from '../../store/cart/cart.slice';
 import { convertPriceToString, getProductResultPrice } from '../../services/UtilsService';
+import { ImagesGallery } from '../../components/images-gallery/ImagesGallery';
+import { AppState } from '../../models/AppState';
+import { useNavigate, useParams } from 'react-router-dom';
 
-export const ProductPage: React.FC<{product: Product}> = ({product}) => {
+export const ProductPage: React.FC = () => {
+    const params = useParams();
+    const navigate = useNavigate();
     
     const [count, setCount] = useState<number>(1);
     const dispatch = useDispatch();
+
+    const product = useSelector((state: AppState) => state.productsState.products.find(it => it.id === parseInt((params?.id ?? '0'))))
+    
+    useEffect(() => {
+        if (!product) {
+            console.log('No product with such id');
+            navigate('/');
+        }
+    }, []);
 
     const getProductPrice = (): string => {
         return convertPriceToString(getProductResultPrice(product));
@@ -19,7 +31,7 @@ export const ProductPage: React.FC<{product: Product}> = ({product}) => {
         if (count < 1) {
             return;
         }
-        dispatch(addItem({productId: product.id, quantity: count}));
+        dispatch(addItem({productId: product!.id, quantity: count}));
         setCount(1);
     }
 

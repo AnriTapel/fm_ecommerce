@@ -1,7 +1,7 @@
-import {Product} from "./Product"
+import {IProduct} from "./Product"
 
 export interface Config {
     result: {
-        products: Product[]
+        products: IProduct[]
     }
 }
